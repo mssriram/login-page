@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,6 +51,13 @@ table {
 
 /* ------------------------ style reset ------------------------- */
 
+
+
+
+body{
+    font-family: 'Arvo', serif;
+}
+
 #login-box{
     position: absolute;
     width: 20%;
@@ -82,6 +91,7 @@ form{
 
 label, input{
     display: block;
+    color: rgb(63, 63, 63);
 }
 
 input{
@@ -90,6 +100,10 @@ input{
     height: 35px;
     border: 1px solid rgb(77, 77, 77);
     margin: 5px 0 0 0;
+    font-family: 'Arvo', serif;
+    font-size: 0.9rem;
+    padding: 3px 10px;
+    color: black;
 }
 
 button{
@@ -99,7 +113,9 @@ button{
     width: 100%;
     margin: 15px 0 0 0;
     color: white;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Arvo', serif;
 }
 
 span{
@@ -108,4 +124,5 @@ span{
 
 a{
     text-decoration: none;
+    color: blue;
 }
