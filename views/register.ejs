@@ -10,26 +10,30 @@
 <body>
     <div id="login-box">
         <h1>Sign Up</h1>
-        <form method="post" action="/register">
+        <form method="post" action="/register" name="registerForm">
             <div class="input-field" id="username-div">
                 <label for="username">Username</label>
-                <input type="text" name="username" title="password" autofocus>
+                <input type="text" id="username" name="username" title="password" autofocus>
+                <span id="check-username" class="alert-span">Username is too short</span>
             </div>
             <div class="input-field" id="email-div">
                 <label for="password">Email</label>
-                <input type="email" name="email" title="email">
+                <input type="email" id="email" name="email" title="password" autofocus>
             </div>
             <div class="input-field" id="password-div">
                 <label for="password">Password</label>
-                <input type="password" name="password" title="password">
+                <input type="password" id="password" name="password" title="password">
             </div>
             <div class="input-field" id="reenter-password-div">
                 <label for="reenter-password">Re-enter Password</label>
-                <input type="password" name="reenter-password" title="reenter-password">
+                <input type="password" id="reenter-password" name="reenterPassword" title="reenter-password">
+                <span id="check-password" class="alert-span">Passwords not matching</span>
             </div>
-            <button class="submit">Signup</button>
-            <span>Already have an account? <a href="/register">Login</a></span>
+            <button class="submit" id="submitButton" name="submitButton">Signup</button>
+            <span id="check-account">Already have an account? <a href="/register">Login</a></span>
         </form>
+
+        <script src="/register.js"></script>
     </div>
 
 </body>

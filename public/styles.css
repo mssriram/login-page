@@ -118,8 +118,17 @@ button{
     font-family: 'Arvo', serif;
 }
 
-span{
+#check-account{
     margin: 10px 0 0 0;
+}
+
+.alert-span{
+    display: block;
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+    text-align: right;
+    margin: 3px 0 0 0;
 }
 
 a{

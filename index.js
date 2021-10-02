@@ -19,8 +19,19 @@ app.get('/login', (req, res) => {
     res.render('login');
 })
 
-app.post('/login', (req, res) => {
-    res.send(req.body);
+app.post('/login', async (req, res) => {
+    const {username, password} = req.body;
+    const hashPassword = sha(password);
+    const findUser = await User.findOne({username: username})
+    console.log(findUser, hashPassword);
+    if (findUser) {
+        if (hashPassword == findUser.password){
+            res.send('Logged In');
+        }
+    }
+    else{
+        res.redirect('/login');
+    }
 })
 
 app.get('/register', (req, res) => {
